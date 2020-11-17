@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MailingService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MailingService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AuthInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthInput" nillable="true" type="tns:AuthInput" />
+  <xs:complexType name="AuthOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResponseStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthOutput" nillable="true" type="tns:AuthOutput" />
+</xs:schema>

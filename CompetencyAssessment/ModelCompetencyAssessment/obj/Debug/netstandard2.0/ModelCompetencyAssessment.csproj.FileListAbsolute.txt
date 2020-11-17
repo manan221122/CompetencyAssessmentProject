@@ -1,0 +1,16 @@
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\ModelCompetencyAssessment.deps.json
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\ModelCompetencyAssessment.dll
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\ModelCompetencyAssessment.pdb
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.Configuration.dll
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.Security.dll
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.xml
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.Configuration.xml
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\bin\Debug\netstandard2.0\System.Security.xml
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.AssemblyInfoInputs.cache
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.AssemblyInfo.cs
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.csproj.CopyComplete
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.dll
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.pdb
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.csprojAssemblyReference.cache
+G:\source\repos\CompetencyAssessment\ModelCompetencyAssessment\obj\Debug\netstandard2.0\ModelCompetencyAssessment.csproj.CoreCompileInputs.cache

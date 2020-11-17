@@ -1,0 +1,174 @@
+﻿@model ModelCompetencyAssessment.UserDetail
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>User Registeration</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .col-md-10 input[type=password] {
+            width: 280px;
+            height: 34px;
+        }
+
+        .UserExist {
+            color: red;
+        }
+        input.hasDatepicker {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript">
+        
+
+        function validate() {
+            var isvalid = true;
+            if (confirm("Are You sure you want to submit?")) {
+
+                var uid = document.getElementById("UserID").value;
+                var PWD = document.getElementById("Password").value;
+            }
+            else {
+                isvalid = false;
+            }
+
+            return isvalid;
+        }
+        $(document).ready(function () {
+            $("#comp").hide();
+        });
+        $(function () {
+            $("#DOB").datepicker({
+                dateFormat: 'yy-MM-dd',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-40:+10",
+                showOn: "both",
+                buttonText: "<i class='glyphicon glyphicon-calendar'></i>"
+            })
+
+        });
+        $(function () {
+
+            $("#RoleID").change(function () {
+
+                if ($(this).val() == "100")
+                {
+                    $("#comp").show();
+                    
+                }
+                else
+                {
+                    $("#comp").hide();
+                }
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+    <div class="form-horizontal">
+        <h4>User Registeration</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserID, "User Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control", placeholder = "User ID" } })
+                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+                <p class="UserExist">@ViewBag.UserExistence</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmployeeID, "Employee Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EmployeeID, new { htmlAttributes = new { @class = "form-control", placeholder = "Employee ID" } })
+                @Html.ValidationMessageFor(model => model.EmployeeID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmailID, "Email ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", placeholder = "Email ID" } })
+                @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DOB, "Date Of Birth", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control", placeholder = "Select Date" } })
+                @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Address" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.RoleID, "Role", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-lg-10">
+                @Html.DropDownListFor(model => model.RoleID, new SelectList(ViewBag.Role, "RoleID", "RoleName"), "Select Role", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.RoleID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div id="comp" class="form-group">
+            @Html.LabelFor(model => model.CompId, "Competency", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-lg-10">
+                @Html.DropDownListFor(model => model.CompId, new SelectList(ViewBag.Competency, "CompId", "CompName"), "Select Competency", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CompId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" onclick="return validate();" />
+            </div>
+        </div>
+    </div>
+    }
+    
+    
+</body>
+</html>

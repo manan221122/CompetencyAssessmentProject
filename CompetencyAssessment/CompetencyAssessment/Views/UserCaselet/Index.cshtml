@@ -1,0 +1,93 @@
+﻿@model ModelCompetencyAssessment.UserCaseLet
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Caselet</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>User CaseLet</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Caselet,"Caselet", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Caselet, new { htmlAttributes = new { @class = "form-control",placeholder= "Caselet" } })
+                    @Html.ValidationMessageFor(model => model.Caselet, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Answer1, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Answer1, new { htmlAttributes = new { @class = "form-control col-md-5",placeholder="Answer" } })
+                    @Html.ValidationMessageFor(model => model.Answer1, "", new { @class = "text-danger" })
+                    &nbsp;
+                    @Html.DropDownListFor(model => model.CompID1, new SelectList(ViewBag.Competency, "CompId", "CompName"), "Select Competency", htmlAttributes: new { @class = "form-control col-md-5" })
+                    @Html.ValidationMessageFor(model => model.CompID1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Answer2, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Answer2, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "Answer" } })
+                    @Html.ValidationMessageFor(model => model.Answer2, "", new { @class = "text-danger" })
+                    @Html.DropDownListFor(model => model.CompID2, new SelectList(ViewBag.Competency, "CompId", "CompName"), "Select Competency", htmlAttributes: new { @class = "form-control col-md-5" })
+                    @Html.ValidationMessageFor(model => model.CompID2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Answer3, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Answer3, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "Answer" } })
+                    @Html.ValidationMessageFor(model => model.Answer3, "", new { @class = "text-danger" })
+                    @Html.DropDownListFor(model => model.CompID3, new SelectList(ViewBag.Competency, "CompId", "CompName"), "Select Competency", htmlAttributes: new { @class = "form-control col-md-5" })
+                    @Html.ValidationMessageFor(model => model.CompID3, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Answer4, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Answer4, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "Answer" } })
+                    @Html.ValidationMessageFor(model => model.Answer4, "", new { @class = "text-danger" })
+                    @Html.DropDownListFor(model => model.CompID4, new SelectList(ViewBag.Competency, "CompId", "CompName"), "Select Competency", htmlAttributes: new { @class = "form-control col-md-5" })
+                    @Html.ValidationMessageFor(model => model.CompID4, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.IsActive)
+                        @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+            <div>
+                <h2>@ViewBag.Message</h2> 
+            </div>
+        </div>
+    }
+    
+    
+</body>
+</html>

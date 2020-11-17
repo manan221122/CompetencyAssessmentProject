@@ -1,0 +1,9 @@
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\bin\Debug\netstandard2.0\SevicesCompetencyAssessment.deps.json
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\bin\Debug\netstandard2.0\SevicesCompetencyAssessment.dll
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\bin\Debug\netstandard2.0\SevicesCompetencyAssessment.pdb
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.AssemblyInfoInputs.cache
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.AssemblyInfo.cs
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.csproj.CoreCompileInputs.cache
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.dll
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.pdb
+G:\source\repos\CompetencyAssessment\SevicesCompetencyAssessment\obj\Debug\netstandard2.0\SevicesCompetencyAssessment.csprojAssemblyReference.cache

@@ -1,0 +1,100 @@
+﻿@model ModelCompetencyAssessment.UserAssessment
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <title>Assessment</title>
+   
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#AssessDt").datepicker({
+                dateFormat: 'yy-MM-dd',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-40:+10",
+                showOn: "both",
+                buttonText: "<i class='glyphicon glyphicon-calendar'></i>"
+            })
+
+        });
+       
+    </script>
+    <style>
+        input.hasDatepicker {
+            display: inline-block;
+            margin-right: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>User Assessment</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.AssessName,"Assessment Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AssessName, new { htmlAttributes = new { @class = "form-control",placeholder = "Assessment Name" } })
+                    @Html.ValidationMessageFor(model => model.AssessName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.AssessDt,"Assessment Date", htmlAttributes: new { @class = "control-label col-md-2"})
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.AssessDt, "Assessment Date", new { htmlAttributes = new { @class = "form-control", placeholder = "Assessment Date" } })                    
+                    @Html.ValidationMessageFor(model => model.AssessDt, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AssessHr, "Assessment Time", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AssessHr, new { htmlAttributes = new { @class = "form-control col-md-5", placeholder = "in hours" } })
+                    @Html.ValidationMessageFor(model => model.AssessHr, "", new { @class = "text-danger" })
+                    <span>&nbsp;</span>
+                    @Html.EditorFor(model => model.AssessMin, new { htmlAttributes = new { @class = "form-control col-md-5",placeholder = "in minutes" } })
+                    @Html.ValidationMessageFor(model => model.AssessMin, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Duration,"Duration(in Minutes)", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Duration, new { htmlAttributes = new { @class = "form-control",placeholder = "in minutes" } })
+                    @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span class="col-md-offset-2 col-md-1">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </span>
+                <span class="col-md-1">
+                    <input type="submit" value="Edit" class="btn btn-default" />
+                </span>
+            </div>
+            <div>
+                @ViewBag.Message
+            </div>
+        </div>
+    }
+
+
+</body>
+</html>

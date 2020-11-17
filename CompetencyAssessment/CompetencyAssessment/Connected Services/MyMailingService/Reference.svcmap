@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6c5097e-c71c-4b75-bdfc-6dcdc436a37d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53214/MailService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MailService.wsdl" MetadataType="Wsdl" ID="a6f85c96-7eaa-4e27-a323-ed28057f84f1" SourceId="1" SourceUrl="http://localhost:53214/MailService.svc?wsdl" />
+    <MetadataFile FileName="MailService.xsd" MetadataType="Schema" ID="4a6ff7ba-fd47-4a3c-b31e-5aded30cec89" SourceId="1" SourceUrl="http://localhost:53214/MailService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MailService1.xsd" MetadataType="Schema" ID="931599dc-25fd-4c4b-be3e-66a4c7458249" SourceId="1" SourceUrl="http://localhost:53214/MailService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MailService2.xsd" MetadataType="Schema" ID="555668ca-bb4d-4827-baff-790dc86abead" SourceId="1" SourceUrl="http://localhost:53214/MailService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

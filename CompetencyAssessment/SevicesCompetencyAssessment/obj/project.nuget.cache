@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pGzFkCDkFu79iQH5oN/CSDbWDA/peWXwxMAbbfQCevcXzUlt5FbcHJQq81pNWDhOZ99NVsEi1R1bdHm1lOqKdg==",
+  "success": true,
+  "projectFilePath": "G:\\source\\repos\\CompetencyAssessment\\SevicesCompetencyAssessment\\SevicesCompetencyAssessment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\jquery\\1.12.4\\jquery.1.12.4.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\jquery.ui.combined\\1.12.1\\jquery.ui.combined.1.12.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
